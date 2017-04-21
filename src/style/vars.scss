@@ -1,0 +1,34 @@
+$assetPath: "";
+
+/* Colors */
+
+$primary-blue: #008ed3;
+
+$secondary-blue: #0076b3;
+$secondary-orange: #ff9933;
+$red: #ff3228;
+$blue-facebook: #3b5998;
+$vroom-orange: #fe8d1c;
+$orange-hover: #f17a00;
+$body-color: #333;
+
+/* Vertical Rhythm */
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 16px;
+
+/* Typography */
+$whitney-book: 'Whitney-Book';
+$font-family-base: $whitney-book;
+
+$link-color: $primary-blue;
+$link-hover-color: $secondary-blue;
+$link-hover-decoration: none;
+
+/* Grid */
+$grid-breakpoints: (
+  xs: 320px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1280px,
+  xl: 1920px
+);

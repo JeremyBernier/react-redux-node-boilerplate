@@ -1,0 +1,12 @@
+# What is linking?
+# docker build -t vroom-new .
+# docker run -p 8080:1337 -it --rm --name vroom-new vroom-new
+
+nginx:
+  build: ./nginx
+  ports:
+    - "80:80"
+app:
+  build: ./node
+  ports:
+    - "8080"

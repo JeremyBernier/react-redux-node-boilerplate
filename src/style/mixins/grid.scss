@@ -1,0 +1,27 @@
+@lost gutter 20px;
+
+@function get-breakpoint($breakpoint) {
+  @if (map-has-key($grid-breakpoints, $breakpoint)) {
+    @return #{map-get($grid-breakpoints, $breakpoint)};
+  } @else {
+    @return $breakpoint;
+  }
+}
+
+@mixin screen-range($min, $max) {
+  @media only screen and (min-width: get-breakpoint($min)) and (max-width: get-breakpoint($max) - 1) {
+    @content;
+  }
+}
+
+@mixin screen-min($breakpoint) {
+  @media only screen and (min-width: get-breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin screen-max($breakpoint) {
+  @media only screen and (max-width: get-breakpoint($breakpoint) - 1) {
+    @content;
+  }
+}

@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/variables";
+@import "mixins";
+@import './vars.scss';
+
+@import "~bootstrap/scss/normalize";
+@import "~bootstrap/scss/reboot";
+
+
+@import './base.scss';
+@import './buttons.scss';
+@import '../modules/common/header/header.scss';
+@import '../modules/common/footer/footer.scss';
+@import '../modules/pages/home/home.scss';

@@ -1,0 +1,4 @@
+{
+  "PORT": 1337,
+  "authSecretKey": "xxxxxxxxxxxxx"
+}

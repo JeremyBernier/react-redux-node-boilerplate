@@ -1,0 +1,48 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "installedESLint": true,
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-console": [
+          1,
+          { "allow": ["warn", "error"] }
+        ],
+        "no-unused-vars": [
+          1,
+          { "argsIgnorePattern": "(state|dispatch|res)"}
+        ],
+        "no-case-declarations": 1,
+        "no-empty": 0,
+        "indent": [
+            "warn",
+            2,
+            {"SwitchCase": 1}
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "off",
+            "never"
+        ],
+        "react/prop-types": 0,
+        "react/no-danger": 0,
+        "react/jsx-curly-spacing": 1
+    }
+}

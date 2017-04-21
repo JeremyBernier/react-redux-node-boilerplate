@@ -1,0 +1,11 @@
+apps:
+  - script : bin/server.js
+    instances: 0
+    exec_mode: cluster
+    watch  : true
+    env    :
+      NODE_ENV: production
+    env_staging:
+      NODE_ENV: staging
+    env_development:
+      NODE_ENV: development

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+build
+bin
+.idea
+stats.json
+.vimrc
+npm-debug.log
