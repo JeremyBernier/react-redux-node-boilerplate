@@ -2,8 +2,8 @@ import React from 'react'
 import { Router, Route, IndexRoute } from 'react-router'
 
 import App from './modules/AppContainer'
-import Sell from './modules/pages/Sell'
-import Home from './modules/pages/Home/HomeContainer'
+import Sell from './pages/Sell'
+import Home from './pages/Home/HomeContainer'
 
 //kind of lame that this polyfill is needed here
 if (typeof require.ensure !== "function") {
@@ -18,7 +18,7 @@ export default (
       <IndexRoute component={Home} />
       <Route getComponent={(location, callback) => {
         require.ensure([], function (require) {
-          callback(null, require('./modules/pages/About').default);
+          callback(null, require('./pages/About').default);
         }, 'about');
       }}>
         <Route path="/about" />
@@ -26,7 +26,7 @@ export default (
       <Route path="/sell" component={Sell} />
       <Route path="/finance" getComponent={(location, callback) => {
         require.ensure([], function (require) {
-          callback(null, require('./modules/pages/Finance').default);
+          callback(null, require('./pages/Finance').default);
         }, 'finance');
       }} />
     </Route>
