@@ -70,9 +70,10 @@ module.exports = function () {
             console.error('Server prefetching failed', err)
             store.dispatch(serverPrefetchFailed())
           })
-          .then(function ([data = {}]) {
+          .then((promiseArr = []) => {
             // This logic is also in client.js, so any changes here must also be reflected there
-            const { statusCode, redirect } = data
+            const promiseData = promiseArr[0] || {}
+            const { statusCode, redirect } = promiseData
 
             if (redirect != null) {
               return res.redirect(redirect)
