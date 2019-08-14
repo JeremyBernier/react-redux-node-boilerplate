@@ -1,8 +1,8 @@
 FROM node:6.9-alpine
 
-COPY . /var/www/sites/vroom-new
+COPY . /var/www/sites/project_name
 
-WORKDIR /var/www/sites/vroom-new
+WORKDIR /var/www/sites/project_name
 
 EXPOSE 1337
 

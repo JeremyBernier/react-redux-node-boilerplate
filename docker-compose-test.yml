@@ -1,6 +1,6 @@
 # What is linking?
-# docker build -t vroom-new .
-# docker run -p 8080:1337 -it --rm --name vroom-new vroom-new
+# docker build -t project_name .
+# docker run -p 8080:1337 -it --rm --name project_name project_name
 
 nginx:
   build: ./nginx
