@@ -2,6 +2,8 @@
 
 This is a React/Redux single page app that can be used as boilerplate for any starting project, or simply for educational purposes. 
 
+**NOTE: This boilerplate is years old (which in the frontend world is like decades old), and at this point is outdated. Webpack, Babel, React-Router, etc. all need to be upgraded (unfortunately not as trivial as simply changing versions). Thus I do not recommend using this boilerplate beyond simply being a reference.**
+
 ### Features:
 
 * Universal/Isomorphic rendering
