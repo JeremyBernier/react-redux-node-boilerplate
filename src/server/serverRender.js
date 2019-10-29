@@ -11,8 +11,8 @@ import { setExperimentVariationKeys } from '../modules/experiment/actions/Experi
 import { serverPrefetchFailed } from '../modules/common/actions/CommonActions'
 import { setUuid } from '../modules/auth/actions/AuthActions'
 import { generateUuid, uuidCookieName } from './misc/uuid'
-import { getVariationKeys, hasActiveExperiments, getDatafile } from '@app/optimizely/server'
-import { promiseTimeout } from '@app/utils/async'
+import { getVariationKeys, hasActiveExperiments, getDatafile } from '../optimizely/server'
+import { promiseTimeout } from '../utils/async'
 
 const UUID_COOKIE_TIME = 62208000000 //2 years
 

@@ -3,7 +3,8 @@ var webpack = require('webpack')
 const ROOT = '../..'
 const PORT = require(ROOT + '/config/serverConfig.json').PORT
 
-require('../symlinks')()
+// require('../symlinks')()
+// 
 
 var configVars = {
   NODE_ENV: JSON.stringify('development'),
@@ -14,11 +15,16 @@ module.exports = {
   devtool: 'source-map',
   context: path.resolve(__dirname, ROOT),
   entry: [
-    'babel-polyfill',
     'webpack-hot-middleware/client',
     'react-hot-loader/patch',
     './src/client'
   ],
+  resolve: {
+    alias: {
+      "App": path.join(__dirname, ROOT + '/src'),
+      "Config": path.join(__dirname, ROOT + '/config'),
+    },
+  },
   output: {
     path: path.join(__dirname, ROOT + '/build'),
     filename: 'js/main.bundle.js',
@@ -48,14 +54,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: Object.assign({ babelrc: false }, require('./dev.babelrc.js'))
-          },
-          'eslint-loader'
-        ],
+        test: /\.jsx?$/,
+        use: {
+          loader: 'babel-loader',
+          options: Object.assign({ babelrc: false }, require('./dev.babelrc.js'))
+        },
         exclude: /node_modules/,
       },
       {

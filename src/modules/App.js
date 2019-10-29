@@ -4,7 +4,7 @@ import Footer from './common/footer/FooterContainer'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { throttle } from 'lodash'
 
-import { mobileDeviceType } from '@app/client/Device'
+import { mobileDeviceType } from '../client/Device'
 
 const { BROWSER } = process.env
 

@@ -12,7 +12,7 @@ import createBrowserHistory from 'history/lib/createBrowserHistory'
 
 import configureStore from './store/configureStore'
 import { getAsyncComponentData } from './shared/renderFunctions'
-import { initOptimizelyClient } from '@app/optimizely/client'
+import { initOptimizelyClient } from './optimizely/client'
 import { setWindowWidth } from './modules/screen/actions/ScreenActions.js'
 
 import { initMobileDetect } from './client/Device'

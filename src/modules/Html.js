@@ -1,6 +1,6 @@
 const { NODE_ENV, VERSION } = process.env
 const isDev = NODE_ENV === 'development'
-import { globalConfig } from '@app/shared/GlobalConfig'
+import { globalConfig } from '../shared/GlobalConfig'
 const { STATIC_URL, SEGMENT_KEY } = globalConfig
 
 const __ENV__ = {

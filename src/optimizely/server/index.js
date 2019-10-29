@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch'
 import optimizely from 'optimizely-server-sdk'
-import { dataFileUrl, projectId, authToken } from '@config/optimizelyConfig'
+import { dataFileUrl, projectId, authToken } from '../../../config/optimizelyConfig'
 
 let optimizelyClient
   , activeExperiments

@@ -1,7 +1,6 @@
 module.exports = {
-  "presets": [
-    ["es2015", {"loose": true, "modules": false}],
-    "react"
-  ],
-  "plugins": ["transform-object-rest-spread"]
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    ["@babel/plugin-transform-runtime"]
+  ]
 }
