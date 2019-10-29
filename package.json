@@ -63,7 +63,7 @@
     "babel-register": "6.24.0",
     "chunk-manifest-webpack-plugin": "1.0.0",
     "css-loader": "0.27.3",
-    "eslint": "3.17.1",
+    "eslint": "4.18.2",
     "eslint-loader": "1.6.3",
     "eslint-plugin-react": "6.10.0",
     "extract-text-webpack-plugin": "2.1.0",
