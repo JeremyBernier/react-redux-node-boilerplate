@@ -3,8 +3,6 @@ var webpack = require('webpack')
 const ROOT = '../..'
 const PORT = require(ROOT + '/config/serverConfig.json').PORT
 
-require('../symlinks')()
-
 var configVars = {
   NODE_ENV: JSON.stringify('development'),
   BROWSER: JSON.stringify(true)
@@ -23,6 +21,13 @@ module.exports = {
     path: path.join(__dirname, ROOT + '/build'),
     filename: 'js/main.bundle.js',
     publicPath: `http://localhost:${PORT}/`
+  },
+  resolve: {
+    alias: {
+      Src: path.join(__dirname, ROOT + '/src'),
+      Config: path.join(__dirname, ROOT + '/config'),
+    },
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({

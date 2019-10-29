@@ -6,9 +6,7 @@ var WebpackMd5Hash = require('webpack-md5-hash') //required for ChunkManifestPlu
 var ManifestPlugin = require('webpack-manifest-plugin')
 const ROOT = '../..'
 
-require('../symlinks')()
-
-const VERSION = require(ROOT + '/package.json').version || '0.0.0'
+// const VERSION = require(ROOT + '/package.json').version || '0.0.0'
 
 var configVars = {
   NODE_ENV: JSON.stringify('production'),
@@ -16,7 +14,7 @@ var configVars = {
 }
 
 const config = require(ROOT + '/config/config.js')['production']
-const { STATIC_URL } = config
+// const { STATIC_URL } = config
 
 module.exports = {
   context: path.resolve(__dirname, ROOT),
@@ -40,6 +38,13 @@ module.exports = {
     publicPath: '/',
     filename: 'js/[name]_[chunkhash]_bundle.js',
     chunkFilename: 'js/[name]_[chunkhash]_chunk.js'
+  },
+  resolve: {
+    alias: {
+      Src: path.join(__dirname, ROOT + '/src'),
+      Config: path.join(__dirname, ROOT + '/config'),
+    },
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({
